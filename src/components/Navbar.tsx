@@ -5,10 +5,10 @@ import { Button } from './ui/button'
 
 const Navbar = () => {
   return (
-<nav className="bg-transparent border-b-slate-700 border-b-[1px]">
-  <div className="max-w-5xl ml-4 px-2">
+<nav className="bg-transparent border-b-slate-700 border-b-[1px] mx-4">
+  <div className="max-w-5xl ml-3 px-2">
   <div className="flex justify-between">
-      <div className="flex mr-20 flex-row items-center justify-evenly space-x-4">
+      <div className="flex flex-row items-center justify-evenly space-x-4">
         <Link href="/" className="flex items-center py-3 px-2 text-[#EEEEEE]">
         <NotebookPen />
           <span className="font-bold text-lg ml-1">Pro Note</span>
@@ -16,7 +16,7 @@ const Navbar = () => {
       </div>
 
 
-      <div className="flex absolute right-2 top-[6px] items-center space-x-1 font-semibold">
+      <div className="flex absolute right-4 top-[6px] items-center space-x-1 font-semibold">
         <Link href="/sign-in">
           <Button className=" transition ease-in-out delay-75 bg-[#222831] text-white font-semibold rounded-[8px] hover:bg-white hover:text-[#892CDC] duration-300 px-3">
           Sign-In
