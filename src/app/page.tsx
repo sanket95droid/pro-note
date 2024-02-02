@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CircleDollarSign } from "lucide-react";
 import Link from "next/link";
 
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#222831]">
@@ -14,7 +13,7 @@ export default function Home() {
           Smarter <span className="text-[#892CDC]">notes</span>, brighter ideas - powered by AI ingenuity
         </h1>
         <div className="flex justify-center">
-          <h2 className="mt-4 rounded-[6px] font-semibold text-xl text-center text-[#BC6FF1] w-fit bg-white items-center p-2">
+          <h2 className="mt-4 rounded-[6px] font-semibold text-xl text-center text-[#892CDC] w-fit bg-white items-center p-2">
             <TypeWriterTitle />
           </h2>
         </div>
