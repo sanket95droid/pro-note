@@ -1,3 +1,4 @@
+import TypeWriterTitle from "@/components/TypeWriterTitle";
 import { Button } from "@/components/ui/button";
 
 
@@ -8,7 +9,9 @@ export default function Home() {
         <h1 className="font-bold text-4xl text-center">
           Smarter <span className="text-[#8f1e00]">notes</span>, brighter ideas - powered by AI ingenuity
         </h1>
-        <h2 className="font-semibold text-xl text-center text-[#8B4513]">AI powered</h2>
+        <h2 className="font-semibold text-xl text-center text-[#8B4513]">
+          <TypeWriterTitle />
+        </h2>
       </div>
     </div>
     );
