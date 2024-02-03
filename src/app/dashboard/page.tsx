@@ -1,3 +1,4 @@
+import CreateNote from '@/components/CreateNote'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { UserButton } from '@clerk/nextjs'
@@ -29,8 +30,8 @@ const page = (props: Props) => {
                 <div className="h-8"></div>
                 <Separator className='bg-slate-700'/>
                 <div className="h-8"></div>
-                <div className="text-center">
-                    <h2 className="text-xl text-white">You have no  notes yet.</h2>
+                <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3">
+                    <CreateNote />
                 </div>
         </div>
     </div>
