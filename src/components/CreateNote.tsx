@@ -9,6 +9,8 @@ import axios from 'axios'
 
 type Props = {}
 
+
+// I still struggle with tanstack/mutation :(
 const CreateNote = (props: Props) => {
     const [input, setInput] = React.useState(' ');
     // mutate function will hit the endpoint createNoteBook and pass in name of the NoteBook as 'input'

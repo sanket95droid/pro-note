@@ -19,6 +19,7 @@ export async function POST(req: Request) {
     if(!image_description){
         return new NextResponse('failed to generate image_description', {status: 500})
     }
+
     const image_url = await generateImage(image_description)
     if(!image_url){
         return new NextResponse('failed to generate image_url', {status: 500})
