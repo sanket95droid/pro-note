@@ -25,13 +25,12 @@ export async function POST(req: Request) {
         return new NextResponse('failed to generate image_url', {status: 500})
     }
 
-    const notes_ids = await db.insert($notes).values({
+    const note_ids = await db.insert($notes).values({
         name,
         userId,
         imageUrl: image_url,
     }).returning({
-        insertedId: $notes.id
-    })
-    return NextResponse.json({note_id: notes_ids[0].insertedId}, {status: 500})
-    console.log(image_description)
+        insertedId: $notes.id,
+    });
+    return NextResponse.json({note_id: note_ids[0].insertedId})
 }

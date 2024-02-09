@@ -11,7 +11,7 @@ type Props = {}
 const page = (props: Props) => {
   return (
     <div className="min-h-screen">
-        <div className="max-w-7xl mx-auto p-5">
+        <div className="max-w-7xl mx-auto p-4">
             <div className="h-14"></div>
             <div className="flex justify-center items-center md:flex-row flex-col">
                 <div className='flex justify-between items-center'>

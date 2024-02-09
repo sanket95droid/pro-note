@@ -1,17 +1,19 @@
 'use client'
 import React from 'react'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from './ui/dialog'
-import { Plus } from 'lucide-react'
+import { Loader2, Plus } from 'lucide-react'
 import { Button } from './ui/button'
 import { Input } from "@/components/ui/input"
 import { useMutation } from '@tanstack/react-query'
 import axios from 'axios'
+import { useRouter } from 'next/navigation'
 
 type Props = {}
 
 
 // I still struggle with tanstack/mutation :(
 const CreateNote = (props: Props) => {
+    const router = useRouter()
     const [input, setInput] = React.useState(' ');
     // mutate function will hit the endpoint createNoteBook and pass in name of the NoteBook as 'input'
     const createNotebook = useMutation({
@@ -22,7 +24,7 @@ const CreateNote = (props: Props) => {
             return response.data;
         }
     })
-    //once create button clicked it will trigger handleSubmit() then it will calll the mutate function
+    //once create button clicked it will trigger handleSubmit() then it will call the mutate function
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (input == '' || input == ' ')
@@ -34,13 +36,14 @@ const CreateNote = (props: Props) => {
         createNotebook.mutate(undefined, {
             onSuccess: ({note_id}) => {
                 console.log('note created', {note_id})
-            }, 
+                router.push(`/notebook/${note_id}`)
+            },  
             onError: (error) => {
-                console.log(error)
+                console.log(error);
+                window.alert("Failed to create")
             },
         });
     };
-
 
   return (
     <Dialog>
@@ -66,7 +69,10 @@ const CreateNote = (props: Props) => {
                     <Button type="reset" variant="secondary" className="hover:scale-110 transition ease-in-out delay-75 bg-gray-200 font-semibold rounded-[8px] hover:bg-red-700 hover:text-white duration-200 p-2">
                         Reset
                     </Button>
-                    <Button size="sm" className="hover:scale-110 transition ease-in-out delay-75 bg-[#BC6FF1] text-white font-semibold rounded-[8px] hover:bg-black duration-200 p-3">
+                    <Button size="sm" className="hover:scale-110 transition ease-in-out delay-75 bg-[#BC6FF1] text-white font-semibold rounded-[8px] hover:bg-black duration-200 p-3" disabled={createNotebook.isPending}>
+                        {createNotebook.isPending && (
+                            <Loader2 className="animate-spin w-4 h-4 mr-2" />
+                        )}
                         Create
                     </Button>
                 </div>
