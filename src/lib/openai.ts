@@ -9,7 +9,7 @@ const openAi = new OpenAIApi(config)
 export async function generateImagePrompt(name: string) {
     try {
         const response = await openAi.createChatCompletion({
-            model: 'gpt-3/5-turbo',
+            model: 'gpt-3.5-turbo',
             messages: [
                 {
                     // telling gpt his role
@@ -28,8 +28,10 @@ export async function generateImagePrompt(name: string) {
         return image_description as string
     }
     catch(error) {
+        console.log(error)
         throw error;
     }
+
 }
 
 export async function generateImage() {

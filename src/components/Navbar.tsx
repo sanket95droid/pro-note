@@ -16,7 +16,6 @@ const Navbar = () => {
 
       </div>
 
-
       <div className="flex absolute right-4 top-[6px] items-center space-x-1 font-semibold">
         <Link href="/sign-in">
           <Button className=" transition ease-in-out delay-75 bg-[#222831] text-white font-semibold rounded-[8px] hover:bg-white hover:text-[#892CDC] duration-300 px-3">
