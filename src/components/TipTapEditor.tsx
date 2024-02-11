@@ -4,7 +4,6 @@ import { EditorContent, useEditor } from '@tiptap/react'
 import {StarterKit} from '@tiptap/starter-kit'
 
 type Props = {}
-
 const TipTapEditor = (props: Props) => {
 const [editorState, setEditorState] = React.useState('');
 const editor = useEditor({
