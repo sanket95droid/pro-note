@@ -9,3 +9,7 @@
 @layer base {
   
 }
+
+.tiptap.ProseMirror {
+    outline: none
+}
