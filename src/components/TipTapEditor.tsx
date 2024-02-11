@@ -2,6 +2,7 @@
 import React from 'react'
 import { EditorContent, useEditor } from '@tiptap/react'
 import {StarterKit} from '@tiptap/starter-kit'
+import TipTapMenuBar from './TipTapMenuBar'
 
 type Props = {}
 const TipTapEditor = (props: Props) => {
@@ -16,11 +17,14 @@ const editor = useEditor({
 });
 
   return (
-    <div>
-        <div>
-            <EditorContent editor={editor} />
-        </div>
-    </div>
+    <>
+      <div className="flex">
+        {editor && <TipTapMenuBar editor={editor} /> }
+      </div>
+      <div>
+          <EditorContent editor={editor} />
+      </div>
+    </>
   )
 }
 

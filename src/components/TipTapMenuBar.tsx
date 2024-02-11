@@ -1,10 +1,18 @@
+import { Editor } from '@tiptap/react';
+import { Bold } from 'lucide-react';
 import React from 'react'
 
-type Props = {}
+type Props = {
+  editor: Editor;
+}
 
-const TipTapMenuBar = (props: Props) => {
+const TipTapMenuBar = ({ editor }: Props) => {
   return (
-    <div>TipTapMenuBar</div>
+    <div className='flex flex-wrap gap-2'>
+      <button>
+        <Bold className='w-8 h-8 bg-gray-400 hover:bg-[#BC6FF1] hover:text-white rounded-[6px] p-1 ' />
+      </button>
+    </div>
   )
 }
 
