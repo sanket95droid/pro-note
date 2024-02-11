@@ -1,3 +1,4 @@
+import TipTapEditor from '@/components/TipTapEditor'
 import { Button } from '@/components/ui/button'
 import { clerk } from '@/lib/clerk-server'
 import { db } from '@/lib/db'
@@ -53,7 +54,9 @@ const Notebookpage = async ({params: {noteID}}: Props) => {
               </div>
           </div>
           <div className="h-4"></div>
-            <div className="border-stone-200 shadow-inner border rounded-[6px] px-16 py-8 bg-white"></div>
+            <div className="border-stone-200 shadow-inner border rounded-[6px] px-16 py-8 bg-white">
+              <TipTapEditor />
+            </div>
       </div>
     </div>
   )
