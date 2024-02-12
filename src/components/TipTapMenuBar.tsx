@@ -2,6 +2,8 @@ import { Editor } from '@tiptap/react';
 import { Bold } from 'lucide-react';
 import React from 'react'
 
+//using tiptap library for the editor
+
 type Props = {
   editor: Editor;
 }
