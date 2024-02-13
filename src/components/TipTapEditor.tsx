@@ -21,8 +21,9 @@ const editor = useEditor({
       <div className="flex">
         {editor && <TipTapMenuBar editor={editor} /> }
       </div>
-      <div>
-          <EditorContent editor={editor} />
+      <div className="h-4"></div>
+      <div className="prose">
+          <EditorContent editor={editor} placeholder='Type here ...'/>
       </div>
     </>
   )
