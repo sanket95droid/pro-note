@@ -10,90 +10,90 @@ type Props = {
 
 const TipTapMenuBar = ({ editor }: Props) => {
   return (
-    <div className='flex flex-wrap gap-2'>
+    <div className='flex flex-wrap gap-4'>
       <button onClick={()=>{editor.chain().focus().toggleBold().run()}}
         disabled={!editor.can().chain().focus().toggleBold().run()}
         className={editor.isActive('bold') ? "is-active": " "}>
-        <Bold className='w-8 h-8 bg-gray-400 hover:bg-[#BC6FF1] hover:text-white rounded-[6px] p-1' />
+        <Bold className='w-8 h-8 bg-gray-300 hover:bg-[#d34848] hover:text-white rounded-[6px] p-1 duration-200' />
       </button>
 
       <button onClick={()=>{editor.chain().focus().toggleItalic().run()}}
         disabled={!editor.can().chain().focus().toggleItalic().run()}
         className={editor.isActive('italic') ? "is-active": " "}>
-        <Italic className='w-8 h-8 bg-gray-400 hover:bg-[#BC6FF1] hover:text-white rounded-[6px] p-1' />
+        <Italic className='w-8 h-8 bg-gray-300 hover:bg-[#d34848] hover:text-white rounded-[6px] p-1 duration-200' />
       </button>
 
       <button
         onClick={() => editor.chain().focus().toggleStrike().run()}
         disabled={!editor.can().chain().focus().toggleStrike().run()}
         className={editor.isActive("strike") ? "is-active" : ""}>
-      <Strikethrough className="w-8 h-8 bg-gray-400 hover:bg-[#BC6FF1] hover:text-white rounded-[6px] p-1" />
+      <Strikethrough className="w-8 h-8 bg-gray-300 hover:bg-[#d34848] hover:text-white rounded-[6px] p-1 duration-200" />
       </button>
       <button
         onClick={() => editor.chain().focus().toggleCode().run()}
         disabled={!editor.can().chain().focus().toggleCode().run()}
         className={editor.isActive("code") ? "is-active" : ""}>
-        <Code className="w-8 h-8 bg-gray-400 hover:bg-[#BC6FF1] hover:text-white rounded-[6px] p-1" />
+        <Code className="w-8 h-8 bg-gray-300 hover:bg-[#d34848] hover:text-white rounded-[6px] p-1 duration-200" />
       </button>
       <button
         onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
         className={editor.isActive("heading", { level: 1 }) ? "is-active" : ""}>
-        <Heading1 className="w-8 h-8 bg-gray-400 hover:bg-[#BC6FF1] hover:text-white rounded-[6px] p-1" />
+        <Heading1 className="w-8 h-8 bg-gray-300 hover:bg-[#d34848] hover:text-white rounded-[6px] p-1 duration-200" />
       </button>
       <button
         onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
         className={editor.isActive("heading", { level: 2 }) ? "is-active" : ""}>
-        <Heading2 className="w-8 h-8 bg-gray-400 hover:bg-[#BC6FF1] hover:text-white rounded-[6px] p-1" />
+        <Heading2 className="w-8 h-8 bg-gray-300 hover:bg-[#d34848] hover:text-white rounded-[6px] p-1 duration-200" />
       </button>
       <button
         onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
         className={editor.isActive("heading", { level: 3 }) ? "is-active" : ""}>
-        <Heading3 className="w-8 h-8 bg-gray-400 hover:bg-[#BC6FF1] hover:text-white rounded-[6px] p-1" />
+        <Heading3 className="w-8 h-8 bg-gray-300 hover:bg-[#d34848] hover:text-white rounded-[6px] p-1 duration-200" />
       </button>
       <button
         onClick={() => editor.chain().focus().toggleHeading({ level: 4 }).run()}
         className={editor.isActive("heading", { level: 4 }) ? "is-active" : ""}>
-        <Heading4 className="w-8 h-8 bg-gray-400 hover:bg-[#BC6FF1] hover:text-white rounded-[6px] p-1" />
+        <Heading4 className="w-8 h-8 bg-gray-300 hover:bg-[#d34848] hover:text-white rounded-[6px] p-1 duration-200" />
       </button>
       <button
         onClick={() => editor.chain().focus().toggleHeading({ level: 5 }).run()}
         className={editor.isActive("heading", { level: 5 }) ? "is-active" : ""}>
-        <Heading5 className="w-8 h-8 bg-gray-400 hover:bg-[#BC6FF1] hover:text-white rounded-[6px] p-1" />
+        <Heading5 className="w-8 h-8 bg-gray-300 hover:bg-[#d34848] hover:text-white rounded-[6px] p-1 duration-200" />
       </button>
       <button
         onClick={() => editor.chain().focus().toggleHeading({ level: 6 }).run()}
         className={editor.isActive("heading", { level: 6 }) ? "is-active" : ""}>
-        <Heading6 className="w-8 h-8 bg-gray-400 hover:bg-[#BC6FF1] hover:text-white rounded-[6px] p-1" />
+        <Heading6 className="w-8 h-8 bg-gray-300 hover:bg-[#d34848] hover:text-white rounded-[6px] p-1 duration-200" />
       </button>
       <button
         onClick={() => editor.chain().focus().toggleBulletList().run()}
         className={editor.isActive("bulletList") ? "is-active" : ""}>
-        <List className="w-8 h-8 bg-gray-400 hover:bg-[#BC6FF1] hover:text-white rounded-[6px] p-1" />
+        <List className="w-8 h-8 bg-gray-300 hover:bg-[#d34848] hover:text-white rounded-[6px] p-1 duration-200" />
       </button>
       <button
         onClick={() => editor.chain().focus().toggleOrderedList().run()}
         className={editor.isActive("orderedList") ? "is-active" : ""}>
-        <ListOrdered className="w-8 h-8 bg-gray-400 hover:bg-[#BC6FF1] hover:text-white rounded-[6px] p-1" />
+        <ListOrdered className="w-8 h-8 bg-gray-300 hover:bg-[#d34848] hover:text-white rounded-[6px] p-1 duration-200" />
       </button>
       <button
         onClick={() => editor.chain().focus().toggleCodeBlock().run()}
         className={editor.isActive("codeBlock") ? "is-active" : ""}>
-        <CodepenIcon className="w-8 h-8 bg-gray-400 hover:bg-[#BC6FF1] hover:text-white rounded-[6px] p-1" />
+        <CodepenIcon className="w-8 h-8 bg-gray-300 hover:bg-[#d34848] hover:text-white rounded-[6px] p-1 duration-200" />
       </button>
       <button
         onClick={() => editor.chain().focus().toggleBlockquote().run()}
         className={editor.isActive("blockquote") ? "is-active" : ""}>
-        <Quote className="w-8 h-8 bg-gray-400 hover:bg-[#BC6FF1] hover:text-white rounded-[6px] p-1" />
+        <Quote className="w-8 h-8 bg-gray-300 hover:bg-[#d34848] hover:text-white rounded-[6px] p-1 duration-200" />
       </button>
       <button
         onClick={() => editor.chain().focus().undo().run()}
         disabled={!editor.can().chain().focus().undo().run()}>
-        <Undo className="w-8 h-8 bg-gray-400 hover:bg-[#BC6FF1] hover:text-white rounded-[6px] p-1" />
+        <Undo className="w-8 h-8 bg-gray-300 hover:bg-[#d34848] hover:text-white rounded-[6px] p-1 duration-200" />
       </button>
       <button
         onClick={() => editor.chain().focus().redo().run()}
         disabled={!editor.can().chain().focus().redo().run()}>
-        <Redo className="w-8 h-8 bg-gray-400 hover:bg-[#BC6FF1] hover:text-white rounded-[6px] p-1" />
+        <Redo className="w-8 h-8 bg-gray-300 hover:bg-[#d34848] hover:text-white rounded-[6px] p-1 duration-200" />
       </button>
     </div>
   )

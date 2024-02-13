@@ -14,7 +14,7 @@ type Props = {}
 // I still struggle with tanstack/mutation :(
 const CreateNote = (props: Props) => {
     const router = useRouter()
-    const [input, setInput] = React.useState(' ');
+    const [input, setInput] = React.useState('');
     // mutate function will hit the endpoint createNoteBook and pass in name of the NoteBook as 'input'
     const createNotebook = useMutation({
         mutationFn: async () =>{
@@ -48,9 +48,9 @@ const CreateNote = (props: Props) => {
   return (
     <Dialog>
         <DialogTrigger>
-            <div className="border-dashed flex border-2 border-[#BC6FF1] h-full rounded-xl item-center justify-center sm:flex-row hover:shadow-xl gap-2 transition hover:-translate-y-1 flex-row p-4">
+            <div className="border-dashed flex border-2 border-[#d34848] h-full rounded-xl item-center justify-center sm:flex-row hover:shadow-lg gap-2 transition hover:-translate-y-2 duration-200 flex-row p-4">
                 <Plus className="w-5 h-5 text-white lg:mt-2 sm:mt-1 md:mt-2" strokeWidth={2}/>
-                <h2 className="font-semibold sm:mt-2 text-white">New Note</h2>
+                <h2 className="font-semibold sm:mt-[6px] text-white">New Note</h2>
             </div>
         </DialogTrigger>
         <DialogContent className="bg-white">
@@ -63,13 +63,13 @@ const CreateNote = (props: Props) => {
                 </DialogDescription>
             </DialogHeader>
             <form onSubmit={handleSubmit}>
-                <Input value={input} onChange={(e)=>{setInput(e.target.value)}} placeholder="Type..." />
+                <Input value={input} className='rounded-[8px]' onChange={(e)=>{setInput(e.target.value)}} placeholder="Type..." />
                 <div className="h-4"></div>
                 <div className="flex items-center justify-center gap-3">
-                    <Button type="reset" variant="secondary" className="hover:scale-110 transition ease-in-out delay-75 bg-gray-200 font-semibold rounded-[8px] hover:bg-red-700 hover:text-white duration-200 p-2">
-                        Reset
+                    <Button type="reset" variant="secondary" className="hover:scale-110 transition ease-in-out delay-75 bg-gray-200 font-semibold rounded-[8px] hover:bg-black hover:text-white duration-200 p-2">
+                        Cancel
                     </Button>
-                    <Button size="sm" className="hover:scale-110 transition ease-in-out delay-75 bg-[#BC6FF1] text-white font-semibold rounded-[8px] hover:bg-black duration-200 p-3" disabled={createNotebook.isPending}>
+                    <Button size="sm" className="hover:scale-110 transition ease-in-out delay-75 bg-[#d34848] text-white font-semibold rounded-[8px] hover:bg-black duration-200 p-3" disabled={createNotebook.isPending}>
                         {createNotebook.isPending && (
                             <Loader2 className="animate-spin w-4 h-4 mr-2" />
                         )}

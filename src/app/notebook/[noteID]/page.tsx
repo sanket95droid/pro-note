@@ -32,12 +32,12 @@ const Notebookpage = async ({params: {noteID}}: Props) => {
     const note = notes[0]
     
   return (
-    <div className="min-h-screen p-8">
+    <div className="min-h-screen p-8 bg-white">
       <div className="max-w-4xl mx-auto">
-        <div className="flex items-center justify-center md:flex-row flex-col bg-[#454e59] p-6 rounded-[6px]">
+        <div className="flex items-center justify-center md:flex-row flex-col bg-[#121212] p-6 rounded-[6px] shadow-xl">
             <div className='flex items-center justify-center'>
                       <Link href='/dashboard'>
-                          <Button size="sm" className="hover:scale-110 transition ease-in-out delay-75 bg-[#BC6FF1] text-white font-semibold rounded-[8px] hover:bg-white hover:text-[#222831] duration-200 p-2">
+                          <Button size="sm" className="hover:scale-110 transition ease-in-out delay-75 bg-[#d34848] text-white font-semibold rounded-[8px] hover:bg-white hover:text-[#222831] duration-200 p-2">
                               <ArrowLeft className="mr-2 w-5 h-5"/>
                               Back
                           </Button>
@@ -46,15 +46,15 @@ const Notebookpage = async ({params: {noteID}}: Props) => {
                       <span className="text-white font-semibold"> {user.firstName} {user.lastName}</span>
                       <span className="text-white inline-block mx-1">/</span>
                       <span className="text-white "></span>
-                      <h1 className="text-stone-400 font-semibold">{note.name}</h1>
+                      <h1 className="text-[#d34848] font-semibold">{note.name}</h1>
                       <div className="w-6"></div>
-                        <Button size="sm" className="hover:scale-110 transition ease-in-out delay-75 bg-red-600 text-white font-semibold rounded-[8px] hover:bg-white hover:text-[#222831] duration-200 p-2">
+                        <Button size="sm" className="hover:scale-110 transition ease-in-out delay-75 bg-white text-black font-semibold rounded-[8px] hover:bg-[#d34848] hover:text-white duration-200 p-2">
                           <Trash2 className='w-5 h-5'/>
                         </Button>
               </div>
           </div>
           <div className="h-4"></div>
-            <div className="border-stone-200 shadow-inner border rounded-[6px] px-16 py-8 bg-white">
+            <div className="border-stone-200 border shadow-xl rounded-[6px] px-16 py-8 bg-white">
               <TipTapEditor />
             </div>
       </div>

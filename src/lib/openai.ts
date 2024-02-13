@@ -1,7 +1,7 @@
 import {Configuration, OpenAIApi} from 'openai-edge'
 
 const config = new Configuration({
-    apiKey: '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'
+    apiKey: process.env.OPENAI_API_KEY
 })
 
 const openAi = new OpenAIApi(config)
@@ -25,6 +25,7 @@ export async function generateImagePrompt(name: string) {
         })
         const data = await response.json()
         const image_description = data.choices[0].message.content
+        console.log(image_description)
         return image_description
     }
     catch(error) {
@@ -43,8 +44,8 @@ export async function generateImage(image_description: string) {
         })
         const data = await response.json()
         const image_url = data.data[0].url
+        console.log(image_url)
         return image_url as string
-        // console.log(image_url)
     }
     catch(error) {
         console.log(error)
