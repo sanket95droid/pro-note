@@ -20,15 +20,15 @@ export async function POST(req: Request) {
         return new NextResponse('failed to generate image_description', {status: 500})
     }
 
-    const image_url = await generateImage(image_description)
-    if(!image_url){
+    const image_URL = await generateImage(image_description)
+    if(!image_URL){
         return new NextResponse('failed to generate image_url', {status: 500})
     }
 
     const note_ids = await db.insert($notes).values({
         name,
         userId,
-        imageUrl: image_url,
+        imageUrl: image_URL,
     }).returning({
         insertedId: $notes.id,
     });
