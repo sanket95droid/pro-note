@@ -35,9 +35,9 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="flex justify-center items-center translate-y-2/3">
+      {/* <div className="flex justify-center items-center translate-y-2/3">
         <Image src={image} className="mt-2 rounded-[10px] w-[750px] h-[500px] shadow-xl shadow-white" alt="application"/>
-      </div>
+      </div> */}
     </div>
     );
 }
