@@ -8,7 +8,7 @@ import image from "../../public/landing.jpg"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#121212] p-2">
+    <div className="min-h-screen bg-[#121212]">
       <Navbar />
       <div className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 items-center text-center">
         <h1 className="font-bold text-4xl text-center text-white">
@@ -35,7 +35,7 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="flex justify-center items-center absolute top-[400px] left-[22%]">
+      <div className="flex justify-center items-center translate-y-2/3">
         <Image src={image} className="mt-2 rounded-[10px] w-[750px] h-[500px] shadow-xl shadow-white" alt="application"/>
       </div>
     </div>
