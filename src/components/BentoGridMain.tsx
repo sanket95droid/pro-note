@@ -66,24 +66,24 @@ const SkeletonOne = () => {
     >
       <motion.div
         variants={variants}
-        className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2  items-center space-x-2 bg-[#121212]"
+        className="flex flex-row rounded-full border border-white/[.05] hover:bg-[#ffffff]/10 outline-none p-2 items-center space-x-2 bg-[#ffffff]/5"
       >
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-        <div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
+        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-[#bd0e32] to-red-400 flex-shrink-0" />
+        <div className="w-ful h-4 rounded-full" />
       </motion.div>
       <motion.div
         variants={variantsSecond}
-        className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center space-x-2 w-3/4 ml-auto bg-[#121212]"
+        className="flex flex-row rounded-full border border-white/[.05] hover:bg-[#ffffff]/10 outline-none p-2 items-center space-x-2 w-3/4 ml-auto bg-[#ffffff]/5"
       >
-        <div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
+        <div className="w-full h-4 rounded-full" />
+        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-[#bd0e32] to-red-400 flex-shrink-0" />
       </motion.div>
       <motion.div
         variants={variants}
-        className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center space-x-2 bg-[#121212]"
+        className="flex flex-row rounded-full border border-white/[.05] hover:bg-[#ffffff]/10 outline-none p-2 items-center space-x-2 bg-[#ffffff]/5"
       >
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-        <div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
+        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-[#bd0e32] to-red-400 flex-shrink-0" />
+        <div className="w-ful h-4 rounded-full" />
       </motion.div>
     </motion.div>
   );
@@ -149,7 +149,7 @@ const SkeletonThree = () => {
       className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] rounded-lg bg-dot-black/[0.2] flex-col space-y-2"
       style={{
         background:
-          "linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)",
+          "linear-gradient(-45deg, #bd0e32, #ffffff)",
         backgroundSize: "400% 400%",
       }}
     >
