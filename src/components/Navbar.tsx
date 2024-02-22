@@ -10,7 +10,7 @@ const Navbar = () => {
   <div className="flex justify-between">
       <div className="flex flex-row items-center justify-evenly space-x-4">
         <Link href="/" className="flex items-center py-3 px-2 text-[#EEEEEE]">
-        <NotebookPen className='text-[#d34848]' />
+        <NotebookPen className='text-[#bd0e32]' />
           <span className="font-bold text-lg ml-1">Pro Note</span>
         </Link>
 
@@ -18,19 +18,19 @@ const Navbar = () => {
 
       <div className="flex absolute right-4 top-[16px] items-center space-x-1 font-semibold">
         <Link href="/sign-in">
-          <Button className=" transition ease-in-out delay-75 text-white font-semibold rounded-[8px] hover:bg-white hover:text-[#d34848] duration-300 px-3">
+          <Button className=" transition ease-in-out delay-75 text-white font-semibold rounded-[8px] hover:bg-white hover:text-[#bd0e32] duration-300 px-3">
           Sign-In
           </Button>
         </Link>
         &nbsp;
         <Link href="/sign-up">
-          <Button className="transition ease-in-out delay-75 text-white font-semibold rounded-[8px] hover:bg-white hover:text-[#d34848] duration-300 px-3">
+          <Button className="transition ease-in-out delay-75 text-white font-semibold rounded-[8px] hover:bg-white hover:text-[#bd0e32] duration-300 px-3">
           Sign-Up
           </Button>
         </Link>
         &nbsp;
         <Link href="/about">
-          <Button className="transition ease-in-out delay-75 text-white font-semibold rounded-[8px] hover:bg-white hover:text-[#d34848] duration-300 px-3">
+          <Button className="transition ease-in-out delay-75 text-white font-semibold rounded-[8px] hover:bg-white hover:text-[#bd0e32] duration-300 px-3">
           About
           </Button>
         </Link>
