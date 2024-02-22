@@ -9,9 +9,9 @@ import { BentoGridMain } from "@/components/BentoGridMain";
 export default function Home() {
   return (
     <>
-    <div className="min-h-screen bg-[#121212]">
+    <div className="min-h-[60vh] bg-[#121212]">
       <Navbar />
-      <div className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 items-center text-center">
+      <div className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-2/3 items-center text-center">
         <h1 className="font-bold text-4xl text-center text-white">
           Smarter <span className="text-[#d34848]">notes</span>, brighter ideas - powered by AI ingenuity
         </h1>
