@@ -1,18 +1,16 @@
-'use client'
-
 import Navbar from "@/components/Navbar";
 import TypeWriterTitle from "@/components/TypeWriterTitle";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CircleDollarSign } from "lucide-react";
 import Link from "next/link";
-import Spline from '@splinetool/react-spline';
+import { BentoGridMain } from "@/components/BentoGridMain";
 
 
 export default function Home() {
   return (
+    <>
     <div className="min-h-screen bg-[#121212]">
       <Navbar />
-      <Spline scene="https://prod.spline.design/448cVErkgW68Iz6y/scene.splinecode" />
       <div className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 items-center text-center">
         <h1 className="font-bold text-4xl text-center text-white">
           Smarter <span className="text-[#d34848]">notes</span>, brighter ideas - powered by AI ingenuity
@@ -36,8 +34,13 @@ export default function Home() {
             <CircleDollarSign className="ml-2 w-5 h-5 animate-spin" />
             </Button>
           </Link>
+          
         </div>
       </div>
     </div>
+    <div className="mt-10">
+      <BentoGridMain />
+    </div>
+    </>
     );
 }
