@@ -302,7 +302,7 @@ const items = [
     title: "AI Content Generation",
     description: (
       <span className="text-sm">
-        Experience the power of AI in generating unique content.
+        Experience the power of AI in generating content for your notes.
       </span>
     ),
     header: <SkeletonOne />,
@@ -313,7 +313,7 @@ const items = [
     title: "Automated Proofreading",
     description: (
       <span className="text-sm">
-        Let AI handle the proofreading of your documents.
+        Search with ease, notes with image thumbnails.
       </span>
     ),
     header: <SkeletonTwo />,
