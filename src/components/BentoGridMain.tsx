@@ -347,7 +347,7 @@ const items = [
     title: "Text Summarization",
     description: (
       <span className="text-sm">
-        Summarize your lengthy documents with AI technology.
+        Click for demonstration.
       </span>
     ),
     header: <SkeletonFive />,
