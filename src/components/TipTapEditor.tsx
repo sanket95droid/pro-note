@@ -20,6 +20,7 @@ const editor = useEditor({
   return (
     <>
       <div className="flex">
+        {/* if editor value if truly then we render TipTapMenuBar with editor object */}
         {editor && <TipTapMenuBar editor={editor} /> }
       </div>
       <div className="h-4"></div>
