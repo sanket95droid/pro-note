@@ -6,14 +6,14 @@ import Link from "next/link";
 import { BentoGridMain } from "@/components/BentoGridMain";
 
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
     <div className="min-h-[60vh] bg-[#0e0e0f]">
       <Navbar />
       <div className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-2/3 items-center text-center">
         <h1 className="font-bold text-4xl text-center text-white">
-          Smarter <span className="text-[#bd0e32]">notes</span>, brighter ideas - powered by AI ingenuity
+        Elevate  <span className="text-[#bd0e32]">notes</span>-taking with AI: Clarity, insight, productivity – redefined.
         </h1>
         <div className="flex justify-center">
           <h2 className="mt-4 rounded-[6px] font-semibold text-xl text-center text-[#233142] w-fit bg-white items-center p-2">
