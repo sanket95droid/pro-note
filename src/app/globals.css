@@ -13,3 +13,7 @@
 .tiptap.ProseMirror {
     outline: none;
 }
+
+.is-active {
+    background-color: black;
+}
