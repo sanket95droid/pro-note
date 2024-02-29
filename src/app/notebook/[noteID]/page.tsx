@@ -55,7 +55,7 @@ const Notebookpage = async ({params: {noteID}}: Props) => {
           </div>
           <div className="h-4"></div>
             <div className="border-stone-200 border shadow-xl rounded-[6px] px-16 py-8 bg-white">
-              <TipTapEditor />
+              <TipTapEditor note={note} />
             </div>
       </div>
     </div>
