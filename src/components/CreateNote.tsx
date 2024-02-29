@@ -48,7 +48,7 @@ const CreateNote = (props: Props) => {
   return (
     <Dialog>
         <DialogTrigger>
-            <div className="border-dashed flex border-2 border-[#d34848] h-full rounded-xl item-center justify-center sm:flex-row hover:shadow-lg gap-2 transition hover:-translate-y-2 duration-200 flex-row p-4">
+            <div className="border-dashed flex border-2 border-[#bd0e32] h-full rounded-xl item-center justify-center sm:flex-row hover:shadow-lg gap-2 transition hover:-translate-y-2 duration-200 flex-row p-4">
                 <Plus className="w-5 h-5 text-white lg:mt-2 sm:mt-1 md:mt-2" strokeWidth={2}/>
                 <h2 className="font-semibold sm:mt-[6px] text-white">New Note</h2>
             </div>
@@ -69,7 +69,7 @@ const CreateNote = (props: Props) => {
                     <Button type="reset" variant="secondary" className="hover:scale-110 transition ease-in-out delay-75 bg-gray-200 font-semibold rounded-[8px] hover:bg-black hover:text-white duration-200 p-2">
                         Cancel
                     </Button>
-                    <Button size="sm" className="hover:scale-110 transition ease-in-out delay-75 bg-[#d34848] text-white font-semibold rounded-[8px] hover:bg-black duration-200 p-3" disabled={createNotebook.isPending}>
+                    <Button size="sm" className="hover:scale-110 transition ease-in-out delay-75 bg-[#bd0e32] text-white font-semibold rounded-[8px] hover:bg-black duration-200 p-3" disabled={createNotebook.isPending}>
                         {createNotebook.isPending && (
                             <Loader2 className="animate-spin w-4 h-4 mr-2" />
                         )}
