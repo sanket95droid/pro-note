@@ -76,7 +76,7 @@ const TipTapEditor = ({ note }: Props) => {
     <>
       <div className="flex">
         {editor && <TipTapMenuBar editor={editor} />}
-        <Button disabled variant={"outline"}>
+        <Button className="rounded-[8px] bg-[#bd0e32] text-white" disabled variant={"outline"}>
           {saveNote.isPending ? "Saving..." : "Saved"}
         </Button>
       </div>
