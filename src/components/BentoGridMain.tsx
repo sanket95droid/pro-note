@@ -135,18 +135,10 @@ const SkeletonThree = () => {
       initial="initial"
       animate="animate"
       variants={variants}
-      transition={{
-        duration: 5,
-        repeat: Infinity,
-        repeatType: "reverse",
-      }}
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] rounded-lg bg-dot-black/[0.2] flex-col space-y-2"
-      style={{
-        background:
-          "linear-gradient(-45deg, #bd0e32, #ffffff)",
-        backgroundSize: "400% 400%",
-      }}
-    >
+      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] rounded-lg bg-dot-black/[0.2] flex-col space-y-2">
+        <video autoPlay muted loop style={{ width: '500px', height: '500px'}} className="rounded-[8px]">
+          <source src="v1.mp4" type="video/mp4" />
+        </video>
       <motion.div className="h-full w-full rounded-lg"></motion.div>
     </motion.div>
   );
@@ -203,7 +195,7 @@ const SkeletonFour = () => {
           className="h-36 w-32 rounded-[8px]"
         />
         <p className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Sensible
+          Electronics
         </p>
       </motion.div>
       <motion.div
@@ -305,10 +297,10 @@ const items = [
     icon: <IconFileBroken className="h-4 w-4 text-white/75" />,
   },
   {
-    title: "Contextual Suggestions",
+    title: "AI Content Generation",
     description: (
       <span className="text-sm">
-        Get AI-powered suggestions based on your writing context.
+        Experience the power of AI in generating content for your notes.
       </span>
     ),
     header: <SkeletonThree />,
