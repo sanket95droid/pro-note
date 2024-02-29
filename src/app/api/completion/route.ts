@@ -24,7 +24,7 @@ export async function POST(req: Request) {
       {
         role: "user",
         content: `
-        I am writing a piece of text in a notion text editor app.
+        I am writing a piece of text in a note taking editor app.
         Help me complete my train of thought here: ##${prompt}##
         keep the tone of the text consistent with the rest of the text.
         keep the response short and sweet.

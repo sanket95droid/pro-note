@@ -11,10 +11,20 @@ import { useRouter } from 'next/navigation'
 type Props = {}
 
 
-// I still struggle with tanstack/mutation :(
+// I still struggle with tanstack/mutation :( 😭
 const CreateNote = (props: Props) => {
     const router = useRouter()
     const [input, setInput] = React.useState('');
+
+    const uploadToFirebase = useMutation({
+        mutationFn: async (noteId: string) => {
+          const response = await axios.post("/api/uploadToFirebase", {
+            noteId,
+          });
+          return response.data;
+        },
+      });
+
     // mutate function will hit the endpoint createNoteBook and pass in name of the NoteBook as 'input'
     const createNotebook = useMutation({
         mutationFn: async () =>{
@@ -23,7 +33,7 @@ const CreateNote = (props: Props) => {
             });
             return response.data;
         }
-    })
+    });
     //once create button clicked it will trigger handleSubmit() then it will call the mutate function
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -36,6 +46,7 @@ const CreateNote = (props: Props) => {
         createNotebook.mutate(undefined, {
             onSuccess: ({note_id}) => {
                 console.log('note created', {note_id})
+                uploadToFirebase.mutate(note_id)
                 router.push(`/notebook/${note_id}`)
             },  
             onError: (error) => {

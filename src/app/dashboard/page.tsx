@@ -7,6 +7,7 @@ import { eq } from 'drizzle-orm'
 import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
+import Image from 'next/image'
 
 type Props = {}
 
@@ -38,9 +39,9 @@ const page = async (props: Props) => {
                     <CreateNote />
                     {notes.map(note => {
                         return (
-                            <a href={`/notes/${note.id}`} key={note.id}>
+                            <a href={`/notebook/${note.id}`} key={note.id}>
                                 <div className="border-dashed border-2 rounded-xl border-[#bd0e32] overflow-hidden flex flex-col hover:shadow-cl transition hover:-translate-y-1">
-                                    <img width={400} height={200} alt={note.name} src={note.imageUrl || ""} />
+                                    <Image width={300} height={200} alt={note.name} src={note.imageUrl || ""} className="p-4 rounded-[25px] " />
                                     <div className='p-6'>
                                         <h3 className="text-xl font-semibold text-white">
                                             {note.name}
