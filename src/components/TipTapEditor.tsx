@@ -32,7 +32,7 @@ const TipTapEditor = ({ note }: Props) => {
   const customText = Text.extend({
     addKeyboardShortcuts() {
       return {
-        "Shift-a": () => {
+        "Control- ": () => {
           // take the last 30 words
           const prompt = this.editor.getText().split(" ").slice(-30).join(" ");
           complete(prompt);
@@ -88,7 +88,7 @@ const TipTapEditor = ({ note }: Props) => {
       <span className="text-sm">
         Tip: Press{" "}
         <kbd className="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg">
-          Shift + A
+          Control + Space
         </kbd>{" "}
         for AI autocomplete
       </span>
