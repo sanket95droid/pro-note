@@ -77,9 +77,10 @@ const CreateNote = (props: Props) => {
                 <Input value={input} className='rounded-[8px]' onChange={(e)=>{setInput(e.target.value)}} placeholder="Type..." />
                 <div className="h-4"></div>
                 <div className="flex items-center justify-center gap-3">
-                    <Button type="reset" variant="secondary" className="hover:scale-110 transition ease-in-out delay-75 bg-gray-200 font-semibold rounded-[8px] hover:bg-black hover:text-white duration-200 p-2">
-                        Cancel
-                    </Button>
+                        <Button
+                        type="reset" variant="secondary" className="hover:scale-110 transition ease-in-out delay-75 bg-gray-200 font-semibold rounded-[8px] hover:bg-black hover:text-white duration-200 p-2" onClick={()=>{setInput("")}}>
+                            Reset
+                        </Button>
                     <Button size="sm" className="hover:scale-110 transition ease-in-out delay-75 bg-[#bd0e32] text-white font-semibold rounded-[8px] hover:bg-black duration-200 p-3" disabled={createNotebook.isPending}>
                         {createNotebook.isPending && (
                             <Loader2 className="animate-spin w-4 h-4 mr-2" />

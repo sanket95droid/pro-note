@@ -30,6 +30,7 @@ const Notebookpage = async ({params: {noteID}}: Props) => {
       return redirect("/dashboard")
     }
     const note = notes[0]
+
     
   return (
     <div className="min-h-screen p-8 bg-white">

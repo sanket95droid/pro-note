@@ -41,7 +41,7 @@ const page = async (props: Props) => {
                         return (
                             <a href={`/notebook/${note.id}`} key={note.id}>
                                 <div className="border-dashed border-2 rounded-xl border-[#bd0e32] overflow-hidden flex flex-col hover:shadow-cl transition hover:-translate-y-1">
-                                    <Image width={300} height={200} alt={note.name} src={note.imageUrl || ""} className="p-4 rounded-[25px] " />
+                                    <Image priority width={300} height={200} alt={note.name} src={note.imageUrl || ""} className="p-4 rounded-[25px] " />
                                     <div className='p-6'>
                                         <h3 className="text-xl font-semibold text-white">
                                             {note.name}

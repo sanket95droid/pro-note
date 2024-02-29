@@ -11,6 +11,9 @@ import {
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import image1 from "../../public/assets/s1.jpg"
+import image2 from "../../public/assets/s2.jpg"
+import image3 from "../../public/assets/s3.jpg"
 
 export function BentoGridMain() {
   return (
@@ -178,53 +181,44 @@ const SkeletonFour = () => {
     >
       <motion.div
         variants={first}
-        className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
+        className="h-full relative z-20 w-1/3 rounded-2xl bg-white/50 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
       >
         <Image
-          src=""
+          src={image1}
           alt="avatar"
           height="100"
           width="100"
-          className="rounded-full h-10 w-10"
+          className="h-36 w-32 rounded-[8px]"
         />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Just code in Vanilla Javascript
-        </p>
-        <p className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Delusional
+        <p className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-2">
+          Entertainment
         </p>
       </motion.div>
-      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
+      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-white/75 backdrop-blur-sm p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
         <Image
-          src=""
+          src={image2}
           alt="avatar"
           height="100"
           width="100"
-          className="rounded-full h-10 w-10"
+          className="h-36 w-32 rounded-[8px]"
         />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Tailwind CSS is cool, you know
-        </p>
         <p className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
           Sensible
         </p>
       </motion.div>
       <motion.div
         variants={second}
-        className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
+        className="h-full w-1/3 rounded-2xl bg-white/50 p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
       >
         <Image
-          src=""
+          src={image3}
           alt="avatar"
           height="100"
           width="100"
-          className="rounded-full h-10 w-10"
+          className="h-36 w-32 rounded-[8px]"
         />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          I love angular, RSC, and Redux.
-        </p>
         <p className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Helpless
+          Technology
         </p>
       </motion.div>
     </motion.div>
@@ -322,7 +316,7 @@ const items = [
     icon: <IconSignature className="h-4 w-4 text-white/75" />,
   },
   {
-    title: "Sentiment Analysis",
+    title: "Note visual",
     description: (
       <span className="text-sm">
         Search with ease, notes with image thumbnails.
