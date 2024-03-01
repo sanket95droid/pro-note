@@ -6,6 +6,8 @@ import { generateImagePrompt, generateImage } from "@/lib/openai";
 import { auth } from "@clerk/nextjs"
 import { NextResponse } from "next/server";
 
+export const runtime = "edge";
+
 export async function POST(req: Request) {
     // we get the userId from the auth()
     const {userId} = auth()

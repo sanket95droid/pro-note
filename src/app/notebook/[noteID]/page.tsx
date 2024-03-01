@@ -1,3 +1,4 @@
+import DeleteNote from '@/components/DeleteNote'
 import TipTapEditor from '@/components/TipTapEditor'
 import { Button } from '@/components/ui/button'
 import { clerk } from '@/lib/clerk-server'
@@ -5,7 +6,7 @@ import { db } from '@/lib/db'
 import { $notes } from '@/lib/db/schema'
 import { auth } from '@clerk/nextjs'
 import { and, eq } from 'drizzle-orm'
-import { ArrowLeft, Trash2 } from 'lucide-react'
+import { ArrowLeft} from 'lucide-react'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import React from 'react'
@@ -49,12 +50,11 @@ const Notebookpage = async ({params: {noteID}}: Props) => {
                   <span className="text-white "></span>
                   <h1 className="text-[#bd0e32] font-semibold">{note.name}</h1>
                   <div className="w-6"></div>
-                  <Button size="sm" className="hover:scale-110 transition ease-in-out delay-75 bg-white text-black font-semibold rounded-[8px] hover:bg-[#bd0e32] hover:text-white duration-200 p-2">
-                    <Trash2 className='w-5 h-5'/>
-                  </Button>
+                  <DeleteNote noteId={note.id} />
               </div>
           </div>
-          <div className="h-4"></div>
+          <div className="
+          h-4"></div>
             <div className="border-stone-200 border shadow-xl rounded-[6px] px-16 py-8 bg-white">
               <TipTapEditor note={note} />
             </div>

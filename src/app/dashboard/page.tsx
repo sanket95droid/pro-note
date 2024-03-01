@@ -12,10 +12,10 @@ import Image from 'next/image'
 type Props = {}
 
 const page = async (props: Props) => {
+    // fetching the notes table then traversing it with note(index) to render respective note cards.
     const {userId} = auth()
-    const notes = await db.select().from($notes).where(
-        eq($notes.userId, userId!)
-    )
+    const notes = await db.select().from($notes).where(eq($notes.userId, userId!))
+
   return (
     <div className="min-h-screen">
         <div className="max-w-7xl mx-auto p-4">
